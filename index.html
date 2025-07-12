@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="https://placedog.net/400/300?id=1" type="image/x-icon">
+  <title> Baby's Breed/AF</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+  <div class="navbar">
+    <h1>🐾 Baby's Breed</h1>
+    <input type="checkbox" id="toggle-menu">
+    <label for="toggle-menu" class="menu-icon">&#9776;</label>
+    <nav class="menu">
+      <a href="#dogs">Dogs</a>
+      <a href="#upload">Upload</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Testimonials</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="container">
+    <section id="dogs">
+      <h2>Discover a Random Dog</h2>
+      <p>Click the button below to see a random dog and its breed information.</p>
+      <button onclick="fetchRandomDog()">Fetch Dog</button>
+      <div id="random-dog" class="card">
+        <img id="dog-image" src="" alt="Dog Image">
+        <p id="dog-breed"></p>
+      </div>
+    </section>
+
+    <section id="upload">
+      <h2>Upload Dog Image</h2>
+      <p>Upload an image of your dog and we'll try to detect its breed.</p>
+      <input type="file" id="file-upload" accept="image/*" />
+      <button onclick="uploadDog()">Detect Breed</button>
+      <div id="upload-preview" class="card">
+        <img id="uploaded-image" src="" alt="Preview">
+        <p id="upload-result"></p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery of Breeds</h2>
+      <div class="gallery">
+        <div class="animal-card">
+          <img src="https://placedog.net/400/300?id=1" alt="Dog 1">
+          <p>Labrador Retriever</p>
+        </div>
+        <div class="animal-card">
+          <img src="https://placedog.net/400/300?id=2" alt="Dog 2">
+          <p>German Shepherd</p>
+        </div>
+        <div class="animal-card">
+          <img src="https://placedog.net/400/300?id=3" alt="Dog 3">
+          <p>Golden Retriever</p>
+        </div>
+         <div class="animal-card">
+          <img src="https://www.thesprucepets.com/thmb/zXkzVVV5P8h2JG0ZUFtXtvIq-lM=/3600x0/filters:no_upscale():strip_icc()/bulldog-4584344-hero-8b60f1e867f046e792ba092eec669256.jpg" alt="Dog 3">
+          <p>English BullDog</p>
+        </div>
+          <div class="animal-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf_bhImlDi0BWY0WMD7EUhyCkHvJ82KCR1TGQq7HBC5e8rRbFFWcMaGyQNSVOU2BEdHY__QZtegOaIBJKXnvGSzQ" alt="Dog 3">
+          <p>Labrador Retreiver</p>
+        </div>
+        <div class="animal-card">
+          <img src="https://cdn.pixabay.com/photo/2018/10/11/11/12/puddle-3739509_1280.jpg" alt="Dog 3">
+          <p>Poddle</p>
+        </div>
+       
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h2>What Our Users Say</h2>
+      <div class="testimonial">
+        <p>"This app helped me learn my puppy is a Beagle! Love it 💖"</p>
+        <span>- Ayesha</span>
+      </div>
+      <div class="testimonial">
+        <p>"Fast, fun, and super easy to use. Highly recommended."</p>
+        <span>- Ahmed</span>
+      
+      </div>
+    </section>
+
+    <p id="error" class="error"></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Baby's Breed | Designed with love 🐶</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  const toggle = document.getElementById("toggle-menu");
+  const links = document.querySelectorAll("nav.menu a");
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      toggle.checked = false;
+    });
+  });
+</script>
+</body>
+</html>
+
+
+   
